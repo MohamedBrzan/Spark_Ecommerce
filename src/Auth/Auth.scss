@@ -1,0 +1,155 @@
+@use '../scss/Variables' as *;
+@use '../scss/Mixins' as *;
+
+.auth {
+  overflow: hidden;
+  height: 100vh;
+  background-color: #dededede;
+  &.sign_up {
+    text-align: center;
+  }
+  &.sign_in {
+    .row {
+      min-height: 110vh;
+    }
+  }
+  .sign_in_content {
+    padding: 2rem;
+    width: 30rem;
+    margin: auto;
+  }
+  .login_img {
+    display: none;
+    @include MediaQuery('md') {
+      display: flex;
+    }
+  }
+  figure {
+    &.sing_up {
+      height: 20rem;
+    }
+
+    img {
+      width: 100%;
+      min-height: 100%;
+    }
+    object-fit: fill;
+    overflow: hidden;
+  }
+  .page_name {
+    h1 {
+      color: $orange;
+      padding: 1rem;
+      &.sing_in_txt {
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: calc(10% + 5rem);
+          background-color: $orange;
+          width: 20%;
+          height: 0.01rem;
+        }
+
+        & + p {
+          color: $grey;
+        }
+      }
+
+      &.sing_up_txt {
+        & + p {
+          margin: 1rem auto;
+          position: relative;
+          color: $orange;
+
+          &::before,
+          &::after {
+            content: '';
+            position: absolute;
+            background-color: $orange;
+            width: 10%;
+            height: 0.01rem;
+            top: 50%;
+          }
+          &::before {
+            left: calc(50% + 3rem);
+          }
+          &::after {
+            right: calc(50% + 3rem);
+          }
+        }
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    .signUp_btn {
+      margin-bottom: 1rem;
+      padding: 0.5rem 4rem;
+      background-color: $orange;
+      border-radius: 1rem;
+      border: 0;
+      outline: 0;
+      &:active {
+        background-color: $light_orange;
+      }
+    }
+  }
+
+  .buttons + p {
+    color: $orange;
+  }
+  .signUp_links {
+    width: 40%;
+    @include MediaQuery('lg') {
+      width: 20%;
+    }
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > svg {
+      cursor: pointer;
+      &:first-child {
+        color: #3b5998;
+      }
+    }
+  }
+
+  .SignIn_links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: auto;
+    width: 30%;
+  }
+
+  form {
+    input {
+      
+    }
+    .form-check {
+      input {
+        outline-color: $orange;
+        border-color: $orange;
+      }
+    }
+    .form_btn {
+      padding: 0.5rem 3rem;
+      border-radius: 3rem;
+      margin: 2rem 0;
+      background: $orange;
+      border: 0;
+      outline: 0;
+      &:active {
+        background: $light_orange;
+      }
+    }
+  }
+}
