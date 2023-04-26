@@ -12,6 +12,7 @@ import FormCheck from 'react-bootstrap/FormCheck';
 import SocialMediaLinks, {
   SocialMediaIconsSize,
 } from '../components/SocialMediaLinks/SocialMediaLinks';
+import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line react-refresh/only-export-components
 export const socialMediaIconsProps: SocialMediaIconsSize = {
@@ -22,7 +23,7 @@ const SignIn = () => {
   return (
     <div className='auth sign_in'>
       <Row>
-        <Col md={6} className='login_img'>
+        <Col md={6} className='auth_img'>
           <figure>
             <img src={signInImage} alt='Sign Up Image.' />
           </figure>
@@ -37,9 +38,11 @@ const SignIn = () => {
             <div className='SignIn_links'>
               <SocialMediaLinks {...socialMediaIconsProps} />
             </div>
-            <p className='lines_word grey'>
-              <strong>or</strong>
-            </p>
+            <div className='lines_word grey'>
+              <div></div>
+              <span>or</span>
+              <div></div>
+            </div>
 
             <Col lg={9} className='m-auto'>
               <Form>
@@ -70,8 +73,16 @@ const SignIn = () => {
                     label='Keep me signed in'
                   />
                 </FormGroup>
+                <div className='text-end'>
+                  <Link to='/forget_password'>Forget Password ?</Link>
+                </div>
 
                 <Button className='form_btn'>Login</Button>
+                <div className='text-center'>
+                  <Link to='/sign_up_decision'>
+                    I don't have any account yet!
+                  </Link>
+                </div>
               </Form>
             </Col>
           </div>
