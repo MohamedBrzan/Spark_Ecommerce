@@ -6,22 +6,28 @@ import FormGroup from 'react-bootstrap/FormGroup';
 import FormControl from 'react-bootstrap/FormControl';
 import FormLabel from 'react-bootstrap/FormLabel';
 
-import { BsFacebook, BsApple } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
 import signInImage from '../assets/images/Auth/signIn.jpg';
 import './Auth.scss';
 import FormCheck from 'react-bootstrap/FormCheck';
-import { Container } from 'react-bootstrap';
+import SocialMediaLinks, {
+  SocialMediaIconsSize,
+} from '../components/SocialMediaLinks/SocialMediaLinks';
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const socialMediaIconsProps: SocialMediaIconsSize = {
+  size: 40,
+};
+
 const SignIn = () => {
   return (
     <div className='auth sign_in'>
       <Row>
-        <Col xs={6} className='login_img'>
+        <Col md={6} className='login_img'>
           <figure>
             <img src={signInImage} alt='Sign Up Image.' />
           </figure>
         </Col>
-        <Col xs={6} className='login_col'>
+        <Col md={6} className='login_col'>
           <div className='sign_in_content'>
             <div className='page_name'>
               <h1 className='sing_in_txt'>Log in</h1>
@@ -29,42 +35,45 @@ const SignIn = () => {
             </div>
 
             <div className='SignIn_links'>
-              <BsFacebook size={50} />
-              <FcGoogle size={50} />
-              <BsApple size={50} />
+              <SocialMediaLinks {...socialMediaIconsProps} />
             </div>
-            <p className='text-center py-5'>
+            <p className='lines_word grey'>
               <strong>or</strong>
             </p>
 
-            <Form>
-              <Col xs={9} >
-                {' '}
+            <Col lg={9} className='m-auto'>
+              <Form>
                 <FormGroup className='mb-3'>
                   <FormLabel aria-label='Email Label'>Email Address</FormLabel>
-                  <FormControl type='email' required aria-label='Email Input' />
+                  <FormControl
+                    type='email'
+                    required
+                    aria-label='Email Input'
+                    placeholder='Enter Your Email'
+                  />
                 </FormGroup>
-              </Col>
-              <Col xs={9}>
+
                 <FormGroup className='mb-3'>
                   <FormLabel aria-label='Password Label'>Password</FormLabel>
                   <FormControl
                     type='password'
                     required
                     aria-label='Password Input'
+                    placeholder='Enter Your Password'
                   />
                 </FormGroup>
-              </Col>
-              <FormGroup>
-                <FormCheck
-                  required
-                  aria-label='Password Input'
-                  label='Keep me signed in'
-                />
-              </FormGroup>
 
-              <Button className='form_btn'>Login</Button>
-            </Form>
+                <FormGroup>
+                  <FormCheck
+                    required
+                    aria-label='Password Input'
+                    label='Keep me signed in'
+                  />
+                </FormGroup>
+
+                <Button className='form_btn'>Login</Button>
+              </Form>
+            </Col>
           </div>
         </Col>
       </Row>

@@ -1,8 +1,8 @@
 import Button from 'react-bootstrap/Button';
-import { BsFacebook, BsApple } from 'react-icons/bs';
-import { FcGoogle } from 'react-icons/fc';
 import signUpImage from '../assets/images/Auth/singup.jpg';
 import './Auth.scss';
+import SocialMediaLinks from '../components/SocialMediaLinks/SocialMediaLinks';
+import { socialMediaIconsProps } from './SignIn';
 const SignUp = () => {
   return (
     <div className='auth sign_up'>
@@ -12,7 +12,7 @@ const SignUp = () => {
 
       <div className='page_name'>
         <h1 className='sing_up_txt'>Sign Up</h1>
-        <p className=''>with</p>
+        <p className='lines_word orange'>with</p>
       </div>
 
       <div className='buttons'>
@@ -25,9 +25,7 @@ const SignUp = () => {
       </p>
 
       <div className='signUp_links'>
-        <BsFacebook size={50} />
-        <FcGoogle size={50} />
-        <BsApple size={50} />
+        <SocialMediaLinks {...socialMediaIconsProps} />
       </div>
     </div>
   );
