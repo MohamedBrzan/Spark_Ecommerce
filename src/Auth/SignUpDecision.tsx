@@ -11,7 +11,7 @@ const SignUpDecision = () => {
   };
   return (
     <div className='auth sign_up'>
-      <figure className='sing_up'>
+      <figure className='sign_up_image'>
         <img src={signUpImage} alt='Sign Up Image.' />
       </figure>
 

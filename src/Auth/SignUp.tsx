@@ -9,7 +9,7 @@ import signInImage from '../assets/images/Auth/signIn.jpg';
 const SignUp = () => {
   return (
     <div className='auth sign_up'>
-      <Row>
+      <Row className='m-0 p-0'>
         <Col md={6} className='auth_img'>
           <figure>
             <img src={signInImage} alt='Sign Up Image.' />

@@ -2,7 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss';
 
 function App() {
-  return <>Aoo</>;
+  return <>Welcome to Ecommerce App</>;
 }
 
 export default App;

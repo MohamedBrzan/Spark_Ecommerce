@@ -1,69 +1,57 @@
 @use '../scss/Variables' as *;
 @use '../scss/Mixins' as *;
 
+%custom_btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 4rem;
+  background-color: $orange;
+  border-radius: 1rem;
+  border: 0;
+  outline: 0;
+  &:active {
+    background-color: $light_orange;
+  }
+  &:active {
+    box-shadow: $orange_shadow;
+  }
+}
+
 .auth {
   min-height: 100vh;
   background-color: #dededede;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
+
+  h1 {
+    color: $orange;
+  }
   .row {
     margin: 0;
     padding: 0;
   }
+
   .sing_up_txt {
     text-align: center;
-  }
-  .lines_word {
-    margin: 3rem auto;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    div {
-      width: 100%;
-      height: 1px;
-      margin: auto;
-      @include MediaQuery('md') {
-        margin: 0 4rem;
-      }
-    }
-
-    &.orange {
-      color: $orange;
-      > div {
-        background-color: $orange;
-      }
-    }
-    &.grey {
-      color: $grey;
-      > div {
-        background-color: $grey;
-      }
-    }
   }
 
   .sign_in_content {
     padding: 2rem;
     margin: auto;
   }
-  .login_img {
-    display: none;
-    @include MediaQuery('md') {
-      display: flex;
-    }
-  }
-  figure {
-    height: 100%;
-    &.sing_up {
-      height: 20rem;
-    }
 
+  figure {
+    height: 20rem;
+    overflow: hidden;
+    margin: 0;
     img {
       width: 100%;
-      min-height: 100%;
+      height: 100%;
     }
-    object-fit: cover;
-    overflow: hidden;
+    &.sign_up_image {
+      height: 20rem;
+      object-fit: cover;
+    }
   }
 
   .auth_img {
@@ -72,13 +60,12 @@
     @include MediaQuery('md') {
       display: flex;
     }
-    img {
+    > figure {
       height: 100vh;
     }
   }
   .page_name {
     h1 {
-      color: $orange;
       padding: 1rem;
       &.sing_in_txt {
         position: relative;
@@ -106,15 +93,7 @@
     align-items: center;
     margin: 1rem auto;
     .signUp_btn {
-      margin-bottom: 1rem;
-      padding: 0.5rem 4rem;
-      background-color: $orange;
-      border-radius: 1rem;
-      border: 0;
-      outline: 0;
-      &:active {
-        background-color: $light_orange;
-      }
+      @extend %custom_btn;
     }
   }
 
@@ -156,5 +135,124 @@
       }
       width: 100%;
     }
+  }
+}
+.code_validation {
+  background-color: #dededede;
+  .row {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+  }
+  .validation {
+    .man_img_col {
+      display: none !important;
+      @include MediaQuery('md') {
+        display: flex !important;
+      }
+    }
+    display: flex;
+    figure {
+      &.lock_image {
+        > img {
+          width: 5rem;
+        }
+      }
+      &.man_image {
+        > img {
+          width: 20rem;
+          @include MediaQuery('lg') {
+            width: 30rem;
+          }
+        }
+      }
+    }
+  }
+  .validate_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .input_group {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      @include MediaQuery('md') {
+        width: 70%;
+      }
+      text-align: center;
+      margin: auto;
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      /* Firefox */
+      input[type='number'] {
+        -moz-appearance: textfield;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      input {
+        &:focus {
+          border-color: $light_orange;
+          outline-color: $light_orange;
+          box-shadow: $orange_shadow;
+        }
+      }
+    }
+    .form_btn {
+      @extend %custom_btn;
+    }
+  }
+}
+
+.lines_word {
+  margin: 3rem auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  div {
+    width: 100%;
+    height: 1px;
+    margin: auto;
+    @include MediaQuery('md') {
+      margin: 0 4rem;
+    }
+  }
+
+  span {
+    padding: 0 1rem;
+  }
+
+  &.orange {
+    color: $orange;
+    > div {
+      background-color: $orange;
+    }
+  }
+  &.grey {
+    color: $grey;
+    > div {
+      background-color: $grey;
+    }
+  }
+}
+
+.forget_password {
+  text-align: center;
+  @include MediaQuery('xs') {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .row {
+    justify-content: center;
+    align-items: center;
   }
 }
