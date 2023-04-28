@@ -5,7 +5,6 @@ import FormControl from 'react-bootstrap/FormControl';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
 import signInImage from '../assets/images/Auth/signIn.jpg';
 
 import './Auth.scss';

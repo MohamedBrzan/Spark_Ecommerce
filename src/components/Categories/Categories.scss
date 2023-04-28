@@ -1,0 +1,53 @@
+@use '../../scss/Variables' as *;
+
+%Center_Div {
+  display: flex;
+  align-items: center;
+}
+
+.categories_section {
+  .categories {
+    @extend %Center_Div;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    .category {
+      @extend %Center_Div;
+      flex-direction: column;
+      justify-content: space-evenly;
+      padding: 1rem;
+
+      figure {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        overflow: hidden;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      &.active {
+        transform: translateX(100%);
+      }
+
+      &.deActive {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    svg {
+      cursor: pointer;
+      color: $orange;
+      font-size: 3rem;
+      padding: 0 1rem;
+      margin: 1rem auto;
+    }
+  }
+}

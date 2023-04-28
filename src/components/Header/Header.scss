@@ -1,0 +1,107 @@
+@use '../../scss/Variables' as *;
+@use '../../scss/Mixins' as *;
+
+%Flex_Evenly {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0;
+}
+
+%Responsive_Disabled {
+  display: none;
+  @include MediaQuery('md') {
+    display: flex;
+  }
+}
+
+header {
+  .info {
+    text-align: center;
+    background-color: $orange;
+    color: whitesmoke;
+    @include MediaQuery('xs') {
+      text-align: start;
+    }
+    div {
+      span {
+        &:first-of-type {
+          padding: 0 0.4rem;
+        }
+      }
+    }
+  }
+  nav {
+    .links {
+      @extend %Flex_Evenly;
+      @extend %Responsive_Disabled;
+      a {
+        text-decoration: none;
+        color: $grey;
+        padding: 0 1rem;
+      }
+    }
+
+    .shorts {
+      @extend %Flex_Evenly;
+      @extend %Responsive_Disabled;
+      li {
+        padding: 0 1rem;
+      }
+    }
+
+    .nav_btn {
+      text-decoration: none;
+      color: white;
+      background-color: $orange;
+      border-radius: 3rem;
+      padding: 0.2rem 2rem;
+      @extend %Responsive_Disabled;
+    }
+  }
+}
+
+.hamburger_menu_icon {
+  cursor: pointer;
+  display: flex;
+  @include MediaQuery('md') {
+    display: none;
+  }
+}
+
+.offcanvas,
+.offcanvas-backdrop {
+  display: block;
+  @include MediaQuery('md') {
+    display: none;
+  }
+}
+
+.offcanvas {
+  .links {
+    li {
+      padding: 0.5rem 0;
+      a {
+        text-decoration: none;
+        color: $grey;
+      }
+    }
+  }
+
+  .shorts {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    li {
+      padding: 1rem;
+    }
+  }
+
+  .nav_btn {
+    text-decoration: none;
+    color: white;
+    background-color: $orange;
+    border-radius: 3rem;
+    padding: 0.2rem 2rem;
+  }
+}

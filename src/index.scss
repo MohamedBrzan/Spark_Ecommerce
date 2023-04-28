@@ -1,3 +1,5 @@
+@use './scss/Variables' as *;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,4 +10,14 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Lato', sans-serif;
+  button {
+    &:focus {
+      box-shadow: $orange_shadow !important;
+    }
+    &:active {
+      box-shadow: $orange_shadow !important;
+    }
+  }
+
+  user-select: none;
 }

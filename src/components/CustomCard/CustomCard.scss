@@ -1,0 +1,20 @@
+@use '../../scss/Variables' as *;
+
+.custom_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .cart_btn {
+    background-color: $orange;
+    color: whitesmoke;
+    border-radius: 0.2rem;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+    &:active {
+      background-color: $light_orange;
+    }
+    margin: 1rem auto;
+  }
+  margin: .4rem;
+  
+}

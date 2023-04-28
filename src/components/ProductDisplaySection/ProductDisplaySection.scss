@@ -1,0 +1,18 @@
+@use '../../scss/Variables' as *;
+
+.feature_products {
+  margin-top: 3rem;
+  h3 {
+    position: relative;
+    text-transform: uppercase;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 25%;
+      width: 10%;
+      height: 1px;
+      background-color: $orange;
+    }
+  }
+}
