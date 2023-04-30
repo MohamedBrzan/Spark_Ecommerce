@@ -9,6 +9,7 @@
 body {
   display: flex;
   flex-direction: column;
+  flex: 1;
   font-family: 'Lato', sans-serif;
   button {
     &:focus {
@@ -20,4 +21,9 @@ body {
   }
 
   user-select: none;
+}
+
+main {
+  flex: 1;
+  min-height: 47vh;
 }

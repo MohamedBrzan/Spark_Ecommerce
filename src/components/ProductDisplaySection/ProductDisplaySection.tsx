@@ -23,7 +23,10 @@ const ProductDisplaySection = (props: ProductDisplay) => {
   return (
     <section className={className}>
       <Container>
-        <h3>{name}</h3>
+        <div className='title'>
+          <h3>{name}</h3>
+          <div className='line'></div>
+        </div>
 
         <Row>
           <Col xs={12} md={6} lg={3}>
