@@ -13,6 +13,7 @@ import Header from './components/Header/Header.tsx';
 import Footer from './components/Footer/Footer.tsx';
 import About from './pages/About/About.tsx';
 import ContactUs from './pages/ContactUs/ContactUs.tsx';
+import Categories from './pages/Categories/Categories.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -29,7 +30,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <Route path='forget_password' element={<ForgetPassword />} />
             <Route path='change_password' element={<ChangePassword />} />
             <Route path='about_us' element={<About />} />
-            <Route path='contact_us' element={<ContactUs />} />
+            <Route path='contact_us' element={<Categories />} />
+            <Route path='categories' element={<ContactUs />} />
           </Route>
         </Routes>
       </main>

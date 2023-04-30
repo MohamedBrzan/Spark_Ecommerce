@@ -40,6 +40,12 @@ header {
         color: $grey;
         padding: 0 1rem;
       }
+
+      li.active {
+        > a {
+          color: $orange;
+        }
+      }
     }
 
     .shorts {

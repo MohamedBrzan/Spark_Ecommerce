@@ -1,6 +1,21 @@
 @use './Mixins' as *;
 @use './Variables' as *;
 
+%custom_btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 4rem;
+  background-color: $orange;
+  border-radius: 1rem;
+  border: 0;
+  outline: 0;
+  &:active {
+    background-color: $light_orange;
+  }
+  &:active {
+    box-shadow: $orange_shadow;
+  }
+}
+
 .title {
   display: flex;
   align-items: center;
@@ -23,25 +38,25 @@
 }
 
 .title_plus {
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
- h3 {
-   position: relative;
-   text-transform: uppercase;
- }
- .line {
-   width: 10%;
-   height: 1px;
-   background-color: $orange;
-   &:first-of-type {
-     margin: 0 1rem 0 0;
-   }
-   &:last-of-type {
-     margin: 0 0 0 1rem;
-   }
- }
+  h3 {
+    position: relative;
+    text-transform: uppercase;
+  }
+  .line {
+    width: 10%;
+    height: 1px;
+    background-color: $orange;
+    &:first-of-type {
+      margin: 0 1rem 0 0;
+    }
+    &:last-of-type {
+      margin: 0 0 0 1rem;
+    }
+  }
 }
 .hstack {
   @include MediaQuery('xs') {

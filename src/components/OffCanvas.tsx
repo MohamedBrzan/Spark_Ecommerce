@@ -3,7 +3,7 @@ import HamburgerMenu from '../assets/images/menu.svg';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import PagesLinks from './Header/helpers/Navbar/helpers/PagesLinks';
 import NavIcons from './Header/helpers/Navbar/helpers/NavIcons';
-import NavBtn, { NavBtnProps } from './Header/helpers/Navbar/helpers/NavBtn';
+import NavBtn, { NavBtnType } from './Header/helpers/Navbar/helpers/NavBtn';
 
 function OffCanvas() {
   const [show, setShow] = useState<boolean>(false);
@@ -11,9 +11,7 @@ function OffCanvas() {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const text: NavBtnProps = {
-    text: 'Login',
-  };
+  const text: NavBtnType = { text: 'Login' };
 
   return (
     <>
@@ -25,7 +23,7 @@ function OffCanvas() {
         <Offcanvas.Header closeButton>
           <Offcanvas.Title>Menu</Offcanvas.Title>
         </Offcanvas.Header>
-        <Offcanvas.Body>
+        <Offcanvas.Body onClick={handleClose}>
           <PagesLinks />
           <NavIcons />
           <NavBtn {...text} />

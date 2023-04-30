@@ -1,0 +1,9 @@
+@use './scss/Variables' as *;
+
+input,
+textarea {
+  &:focus {
+    box-shadow: $orange_shadow !important;
+    border-color: $orange !important;
+  }
+}

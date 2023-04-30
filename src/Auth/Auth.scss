@@ -1,20 +1,6 @@
 @use '../scss/Variables' as *;
 @use '../scss/Mixins' as *;
-
-%custom_btn {
-  margin-bottom: 1rem;
-  padding: 0.5rem 4rem;
-  background-color: $orange;
-  border-radius: 1rem;
-  border: 0;
-  outline: 0;
-  &:active {
-    background-color: $light_orange;
-  }
-  &:active {
-    box-shadow: $orange_shadow;
-  }
-}
+@use '../scss/ClassNames' as *;
 
 .auth {
   min-height: 100vh;

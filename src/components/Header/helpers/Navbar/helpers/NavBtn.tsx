@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom';
-import NavBtnProps from '../../../../../types/NavBtn';
 
-const NavBtn = (props: NavBtnProps) => {
+export type NavBtnType = {
+  text: string;
+};
+
+const NavBtn = (props: NavBtnType) => {
   const { text } = props;
   return (
     <Link to='/sign_in' className='nav_btn'>

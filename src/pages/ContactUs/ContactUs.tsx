@@ -7,6 +7,7 @@ import {
   FormGroup,
   FormLabel,
   Row,
+  Stack,
 } from 'react-bootstrap';
 import './ContactUs.scss';
 import CustomBreadCrumb from '../../components/CustomBreadCrumb/CustomBreadCrumb';
@@ -43,16 +44,14 @@ const ContactUs = () => {
           <div className='line'></div>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo iste
-          exercitationem dolore fugiat nobis tempore cum error labore distinctio
-          velit deleniti, odit, quis accusantium officia delectus. Id corrupti a
-          ducimus?
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
+          accusamus enim fuga voluptatem sint delectus ratione iure
         </p>
 
-        <Row className='info'>
-          <Col>
+        <Stack direction='horizontal' gap={2} className='info'>
+          <Col xs={12} md={6} lg={4} className='info_card'>
             <div className='icon'>
-              <FontAwesomeIcon icon={faAddressCard} />
+              <FontAwesomeIcon icon={faAddressCard} size='2xl' />
             </div>
             <p className='address'>
               <strong>Address</strong>
@@ -60,13 +59,11 @@ const ContactUs = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
               accusamus enim fuga voluptatem sint delectus ratione iure
-              deleniti. Pariatur doloribus dolorum molestias architecto harum,
-              cumque fugiat provident eius odio quis?
             </p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={4} className='info_card'>
             <div className='icon'>
-              <FontAwesomeIcon icon={faPhone} />
+              <FontAwesomeIcon icon={faPhone} size='2xl' />
             </div>
             <p className='address'>
               <strong>Phone Number</strong>
@@ -74,13 +71,11 @@ const ContactUs = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
               accusamus enim fuga voluptatem sint delectus ratione iure
-              deleniti. Pariatur doloribus dolorum molestias architecto harum,
-              cumque fugiat provident eius odio quis?
             </p>
           </Col>
-          <Col>
+          <Col xs={12} md={6} lg={4} className='info_card'>
             <div className='icon'>
-              <FontAwesomeIcon icon={faMailBulk} />
+              <FontAwesomeIcon icon={faMailBulk} size='2xl' />
             </div>
             <p className='address'>
               <strong>E-Mail Address</strong>
@@ -88,11 +83,9 @@ const ContactUs = () => {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia
               accusamus enim fuga voluptatem sint delectus ratione iure
-              deleniti. Pariatur doloribus dolorum molestias architecto harum,
-              cumque fugiat provident eius odio quis?
             </p>
           </Col>
-        </Row>
+        </Stack>
 
         <div className='title'>
           <h3>
@@ -102,7 +95,7 @@ const ContactUs = () => {
         </div>
 
         <Form>
-          <FormGroup>
+          <FormGroup className='mb-3'>
             <FormLabel>Name :</FormLabel>
             <FormControl
               type='text'
@@ -111,7 +104,7 @@ const ContactUs = () => {
               required
             />
           </FormGroup>
-          <FormGroup>
+          <FormGroup className='mb-3'>
             <FormLabel>E-Mail :</FormLabel>
             <FormControl
               type='email'
@@ -125,6 +118,7 @@ const ContactUs = () => {
             <FormControl
               as='textarea'
               type='text'
+              rows={5}
               placeholder='Write Your Message'
               aria-label='Write Your Message'
               required
