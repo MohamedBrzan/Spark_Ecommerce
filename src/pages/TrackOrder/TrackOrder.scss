@@ -1,0 +1,12 @@
+@use '../../scss/Variables' as *;
+@use '../../scss/ClassNames' as *;
+
+.track_order {
+
+ .form_btn{
+  @extend %custom_btn;
+  display: block;
+  margin: auto;
+  
+ }
+}

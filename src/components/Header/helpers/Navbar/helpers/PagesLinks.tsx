@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 
 const PagesLinks = () => {
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+  const handleClick: any = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
     const elements = document.querySelectorAll('.links li.link');
 
     elements.forEach((link) => {
@@ -33,6 +35,31 @@ const PagesLinks = () => {
       <li className='link'>
         <Link to='/contact_us' onClick={handleClick}>
           Contact Us
+        </Link>
+      </li>
+      <li className='link'>
+        <Link to='/check_out' onClick={handleClick}>
+          Check Out
+        </Link>
+      </li>
+      <li className='link'>
+        <Link to='/order_confirmed' onClick={handleClick}>
+          Order Confirmed
+        </Link>
+      </li>
+      <li className='link'>
+        <Link to='/faq' onClick={handleClick}>
+          FAQ
+        </Link>
+      </li>
+      <li className='link'>
+        <Link to='/terms_conditions' onClick={handleClick}>
+          Terms&Conditions
+        </Link>
+      </li>
+      <li className='link'>
+        <Link to='/admin' onClick={handleClick}>
+          Admin
         </Link>
       </li>
     </ul>

@@ -13,7 +13,13 @@ import Header from './components/Header/Header.tsx';
 import Footer from './components/Footer/Footer.tsx';
 import About from './pages/About/About.tsx';
 import ContactUs from './pages/ContactUs/ContactUs.tsx';
-import Categories from './pages/Categories/Categories.tsx';
+import CheckOut from './pages/CheckOut/CheckOut.tsx';
+import OrderConfirmed from './pages/OrderConfirmed/OrderConfirmed.tsx';
+import TrackOrder from './pages/TrackOrder/TrackOrder.tsx';
+import FAQ from './pages/FAQ/FAQ.tsx';
+import TermsAndConditions from './pages/TermsAndConditions/TermsAndConditions.tsx';
+import CategoryPage from './pages/Categories/CategoryPage.tsx';
+import Admin from './pages/admin/Admin.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -30,8 +36,18 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
             <Route path='forget_password' element={<ForgetPassword />} />
             <Route path='change_password' element={<ChangePassword />} />
             <Route path='about_us' element={<About />} />
-            <Route path='contact_us' element={<Categories />} />
-            <Route path='categories' element={<ContactUs />} />
+            <Route path='categories' element={<CategoryPage />} />
+            <Route path='contact_us' element={<ContactUs />} />
+            <Route path='check_out' element={<CheckOut />} />
+            <Route path='order_confirmed'>
+              <Route index element={<OrderConfirmed />} />
+              <Route path='track_order' element={<TrackOrder />} />
+            </Route>
+            <Route path='faq' element={<FAQ />} />
+            <Route path='terms_conditions' element={<TermsAndConditions />} />
+            <Route path='admin'>
+              <Route index element={<Admin />} />
+            </Route>
           </Route>
         </Routes>
       </main>

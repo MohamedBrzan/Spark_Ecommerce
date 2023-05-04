@@ -1,0 +1,8 @@
+@use '../../scss/Variables' as *;
+
+.termsAndConditions {
+ line-height: 2;
+  h5 {
+    color: $orange;
+  }
+}

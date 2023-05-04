@@ -2,16 +2,18 @@ import PagesLinks from './helpers/PagesLinks';
 import NavIcons from './helpers/NavIcons';
 import NavBtn from './helpers/NavBtn';
 import OffCanvas from '../../../OffCanvas';
-import NavBtnProps from '../../../../types/NavBtn';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-  const text: NavBtnProps = {
+  const text = {
     text: 'Login',
   };
   return (
     <nav className='navbar'>
       <h1 className='logo'>
-        <strong>Spark</strong>
+        <Link to='/'>
+          <strong>Spark</strong>
+        </Link>
       </h1>
       <PagesLinks />
       <NavIcons />

@@ -21,12 +21,6 @@ import {
 const ContactUs = () => {
   const BreadcrumbData = [
     {
-      name: 'Home',
-      active: true,
-      link: '/',
-    },
-
-    {
       name: 'Contact Us',
     },
   ];

@@ -1,0 +1,9 @@
+@use '../../scss/ClassNames' as *;
+
+.check_out {
+  .form_btn {
+    @extend %custom_btn;
+    display: block;
+    margin: auto;
+  }
+}

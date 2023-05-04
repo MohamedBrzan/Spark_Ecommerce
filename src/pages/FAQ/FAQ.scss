@@ -1,0 +1,59 @@
+@use '../../scss/Variables' as *;
+@use '../../scss/ClassNames' as *;
+
+.faq {
+  .head_section {
+    background-color: $offWhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 1rem;
+    h2 {
+      color: $orange;
+    }
+  }
+  .faq_section {
+    margin: 4rem auto;
+    .faq_col {
+      border-radius: 0.3rem;
+      margin: auto;
+      figure {
+        width: 4rem;
+        height: 4rem;
+        background-color: $offWhite;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+        }
+      }
+      .question {
+        color: $orange;
+      }
+      .answer {
+        color: $grey;
+      }
+    }
+  }
+
+  .another_faq {
+    background-color: $offWhite;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    .row {
+      margin: 0;
+      padding: 0;
+      align-items: center;
+    }
+    .form_btn {
+      @extend %custom_btn;
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

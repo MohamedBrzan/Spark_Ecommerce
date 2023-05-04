@@ -16,6 +16,12 @@
 }
 
 header {
+  .logo {
+    a {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
   .info {
     text-align: center;
     background-color: $orange;

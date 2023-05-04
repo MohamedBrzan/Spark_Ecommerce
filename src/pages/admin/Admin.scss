@@ -1,0 +1,114 @@
+@use '../../scss/Variables' as *;
+@use '../../scss/Mixins' as *;
+@use '../../scss/ClassNames' as *;
+
+.admin {
+  .list_section {
+    .item {
+      padding: 1rem;
+      cursor: pointer;
+      background-color: $offWhite;
+      border-bottom: 2px solid grey;
+      &.active {
+        background-color: $orange;
+        border-bottom: 2px solid greenyellow;
+        &:hover {
+          color: $offWhite;
+          border-bottom: 2px solid greenyellow;
+        }
+      }
+      &:hover {
+        color: $orange;
+        border-bottom: 2px solid greenyellow;
+      }
+    }
+    h6.email {
+      color: $grey;
+    }
+  }
+  article.content {
+    section {
+      display: none;
+      &.active {
+        display: block;
+      }
+      .form_btn {
+        @extend %custom_btn;
+      }
+      &.profile {
+        .form_sec {
+          background-color: $offWhite;
+          border-radius: 0.4rem;
+          padding: 2rem;
+          margin-bottom: 1rem;
+        }
+      }
+      &.address {
+        .row {
+          margin: 0;
+          padding: 0;
+          gap: 1rem;
+          .address_col {
+            background-color: $offWhite;
+            border-radius: 1rem;
+            padding: 2rem;
+            h6 {
+              color: $orange;
+            }
+            span {
+              color: $grey;
+            }
+          }
+        }
+      }
+      &.orders {
+        text-align: center;
+        table {
+          overflow: scroll;
+          td {
+            background-color: $offWhite;
+            .row {
+              margin: 0;
+              padding: 0;
+              align-items: center;
+            }
+            span {
+              &.grey {
+                color: $orange;
+              }
+              &.green {
+                color: greenyellow;
+              }
+              &.red {
+                color: red;
+              }
+            }
+          }
+          figure {
+            img {
+              width: 8rem;
+            }
+          }
+        }
+        figure {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: 0;
+
+          img {
+            width: 30rem;
+          }
+        }
+        h2 {
+          font-size: 3rem;
+          color: $orange;
+        }
+        a {
+          text-decoration: none;
+          color: $offWhite;
+        }
+      }
+    }
+  }
+}

@@ -73,11 +73,6 @@ const About = () => {
 
   const BreadcrumbData: BreadCrumbType[] = [
     {
-      name: 'Home',
-      active: true,
-      link: '/',
-    },
-    {
       name: 'About',
     },
   ];
